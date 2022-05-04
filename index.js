@@ -29,6 +29,9 @@ passport.authenticate('google',{
     failureRedirect:'/auth/failure',
 })
 );
+app.get('/upload',(req,res)=>{
+    res.sendFile('/Users/himasai/Desktop/loginpage/upload.html')
+})
 app.get('/auth/failure',(req,res)=>{
     res.send('something went wrong...')
 })
